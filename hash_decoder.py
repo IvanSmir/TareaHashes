@@ -98,7 +98,7 @@ def analyze_hash(hash_string):
     if hash_type == "Base64":
         print(f"Texto decodificado: {decode_base64(hash_string)}")
     elif hash_type in ["MD5", "SHA-256", "SHA-512", "Bcrypt", "Argon2i"]:
-        print("No es posible obtener el texto original debido a la naturaleza unidireccional del hash.")
+        print("No es posible obtener el texto original debido a la naturaleza unidireccional del hash. Solo es posible obtener el resultado haciendo una fuerza bruta.")
 
 def main():
     print("=" * 80)
@@ -118,6 +118,14 @@ def main():
     for hash_string in hashes_to_analyze:
         analyze_hash(hash_string)
     
+    print("Para los hashes 2 y 3, se puede descifrar o deshacer el hash con una base de datos conocidas dando como resultado: ")
+    print("a5b6c33382f2f1cddbfbaba65f2b892b193fa6361d481d8a12229a2d6d95d9b792f6204ea96e706fe6d6914d7f083a213706972e5831e1c7e2cf3c33642a2df9")
+    print("P4ssw0rd!")
+    print("-" * 60)
+    print("9c87400128d408cdcda0e4b3ff0e66fa")
+    print("contrasena")
+    print("-" * 60)
+
     print("\nEJERCICIO 2: CÁLCULO DE HASHES PARA 'Passw0rd!'")
     print("-" * 60)
     
